@@ -35,11 +35,36 @@ module Fastlane
 
       def self.available_options
         [
-          # FastlaneCore::ConfigItem.new(key: :your_option,
-          #                         env_name: "ALI_OSS_YOUR_OPTION",
-          #                      description: "A description of your option",
-          #                         optional: false,
-          #                             type: String)
+          FastlaneCore::ConfigItem.new(key: :endpoint,
+            env_name: "ALIYUN_OSS_ENDPOINT",
+            description: "endPoint of OSS",
+            optional: false,
+            type: String),
+          FastlaneCore::ConfigItem.new(key: :accessKey,
+            env_name: "ALIYUN_ACCESS_KEY",
+            description: "accessKey of aliyun",
+            optional: false,
+            type: String),
+          FastlaneCore::ConfigItem.new(key: :accessSecret,
+            env_name: "ALIYUN_ACCESS_SECRET",
+            description: "accessSecret of aliyun",
+            optional: false,
+            type: String),
+          FastlaneCore::ConfigItem.new(key: :bucket,
+            env_name: "ALIYUN_OSS_BUCKET",
+            description: "bucket of OSS",
+            optional: false,
+            type: String),
+          FastlaneCore::ConfigItem.new(key: :path,
+            env_name: "ALIYUN_OSS_PATH",
+            description: "object path of OSS",
+            optional: false,
+            type: String),
+          FastlaneCore::ConfigItem.new(key: :localFile,
+            env_name: "ALIYUN_OSS_LOCALFILE",
+            description: "local file that wanna be upload",
+            optional: false,
+            type: String)
         ]
       end
 
