@@ -9,7 +9,7 @@ module Fastlane
           access_key_id: params[:accessKey], access_key_secret: params[:accessSecret])
         
         bucket = client.get_bucket(params[:bucket])
-        UI.message("uploadding file into OSS...")
+        UI.message("uploadding file into OSS(as #{params[:path]})...")
         bucket.put_object(params[:path], :file => params[:localFile])
       
         # print(params)
