@@ -14,6 +14,10 @@ fastlane add_plugin ali_oss
 
 plugin to update files to OSS(aliyun).
 
+### Available actions
+
+- `ali_oss` upload file into OSS.
+
 ## Example
 
 Copy the [example `Pluginfile`](fastlane/Pluginfile) into your `fastlane` folder, and `bundle update'.

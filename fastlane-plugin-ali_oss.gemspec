@@ -10,7 +10,7 @@ Gem::Specification.new do |spec|
   spec.email         = %q{luffy.ja@gmail.com}
 
   spec.summary       = %q{plugin to update files to OSS(aliyun).}
-  # spec.homepage      = "https://github.com/<GITHUB_USERNAME>/fastlane-plugin-ali_oss"
+  spec.homepage      = "https://github.com/mingshz/fastlane-plugin-ali_oss"
   spec.license       = "MIT"
 
   spec.files         = Dir["lib/**/*"] + %w(README.md LICENSE)
@@ -21,6 +21,7 @@ Gem::Specification.new do |spec|
   # since this would cause a circular dependency
 
   # spec.add_dependency 'your-dependency', '~> 1.0.0'
+  spec.add_dependency 'aliyun-sdk', '>= 0.7.1'
 
   spec.add_development_dependency 'pry'
   spec.add_development_dependency 'bundler'
