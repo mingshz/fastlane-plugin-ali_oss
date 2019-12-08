@@ -1,8 +1,19 @@
+require 'aliyun/oss'
+
 module Fastlane
   module Actions
     class AliOssAction < Action
       def self.run(params)
-        UI.message("The ali_oss plugin is working!")
+        client = Aliyun::OSS::Client.new(
+          endpoint: params[:endpoint],
+          access_key_id: params[:accessKey], access_key_secret: params[:accessSecret])
+        
+        bucket = client.get_bucket(params[:bucket])
+        UI.message("uploadding file into OSS...")
+        bucket.put_object(params[:path], :file => params[:localFile])
+      
+        # print(params)
+        UI.success("putted into OSS successful.")
       end
 
       def self.description
